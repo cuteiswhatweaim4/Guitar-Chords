@@ -1,1 +1,82 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9; /* Light background */
+    color: #333; /* Text color */
+}
+
+/* Header Styles */
+header {
+    background-color: #ffcc00; /* Aesthetic yellow */
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em; /* Larger title */
+}
+
+/* Navigation Styles */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline; /* Horizontal list */
+    margin: 0 15px; /* Spacing between links */
+}
+
+nav ul li a {
+    color: #333; /* Text color for links */
+    text-decoration: none; /* No underline */
+    font-weight: bold; /* Bold links */
+}
+
+/* Main Content Styles */
+main {
+    padding: 20px; /* Padding around main content */
+}
+
+/* Section Styles */
+section {
+    background: white; /* White background for sections */
+    margin: 20px 0; /* Space between sections */
+    padding: 20px; /* Padding inside sections */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+section h2 {
+    color: #ffcc00; /* Yellow color for section titles */
+}
+
+section h3 {
+    color: #666; /* Gray color for subheadings */
+}
+
+section p {
+    line-height: 1.6; /* Improve readability */
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #f1f1f1; /* Light gray background for footer */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    nav ul li {
+        display: block; /* Stack links vertically on small screens */
+        margin: 10px 0; /* Spacing for vertical layout */
+    }
+}
 
