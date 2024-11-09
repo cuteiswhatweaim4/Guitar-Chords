@@ -3,12 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Justin Biever - Songs</title>
+    <title>Justin Bieber - Songs</title>
     <link rel="stylesheet" href="style.css">
-    <script defer>
+</head>
+<body>
+    <header>
+        <h1>Justin Bieber - Songs</h1>
+    </header>
+
+    <main>
+        <!-- Links to Load Songs -->
+        <nav>
+            <ul>
+                <li><a href="#" onclick="loadSong('baby')">Baby</a></li>
+                <li><a href="#" onclick="loadSong('loveYourself')">Love Yourself</a></li>
+            </ul>
+        </nav>
+
+        <!-- Placeholder for song content -->
+        <section id="songContent">
+            <h2>Select a song to view the lyrics and chords</h2>
+        </section>
+    </main>
+
+    <footer>
+        <p><a href="index.html">Back to Home</a></p>
+    </footer>
+
+    <script>
         function loadSong(song) {
             const songContent = document.getElementById('songContent');
-            if (song === 'Love Yourself') {
+            if (song === 'baby') {
+                songContent.innerHTML = `
+                    <h2>Baby</h2>
+                    <pre>
+[Intro]
+C Am F G
+
+[Chorus]
+C
+You know you love me
+Am
+I know you care
+F
+You shout whenever
+G
+And I'll be there
+                    </pre>
+                `;
+            } else if (song === 'loveYourself') {
                 songContent.innerHTML = `
                     <h2>Love Yourself</h2>
                     <pre>
@@ -137,113 +180,11 @@ Oh baby you should go and love yourself
            C          G         Am      F
 And if you think that I'm still holdin' on to somethin'
 C                 F        C
-You should go and love yourself                  </pre>
-                `;
-            } else if (song === 'sadSong') {
-                songContent.innerHTML = `
-                    <h2>10000 Hours</h2>
-                    <pre>
-[Capo 2]
-
-[Intro]
-G D A
-G D A
-
-[Verse 1]
-D A Bm G
-You and I were like fireworks and symphonies exploding in the sky.
-D A
-With you I'm alive
-Bm G
-like all the missing pieces of my heart, they finally collide
-G A
-So stop time right here in the moonlight
-Bm C
-'cause I don't ever wanna close my eyes
-
-[Chorus]
-G D A
-Without you, I feel broke like I'm half of a whole
-G D A
-Without you, I've got no hand to hold
-G D A Bm A G
-Without you, I feel torn, like a sail in a storm
-A G D A
-Without you I'm just a sad song
-G D A
-I'm just a sad song
-
-[Verse 2]
-D A Bm G
-With you I fall it's like I'm leaving all my past and silhouettes upon the wall
-D A
-With you I'm a beautiful mess
-Bm G
-it's like we're standing hand in hand with all our fears upon the edge
-G A
-So stop time right here in the moonlight
-Bm C
-'cause I don't ever wanna close my eyes
-
-[Chorus]
-G D A
-Without you, I feel broke like I'm half of a whole
-G D A
-Without you, I've got no hand to hold
-G D A Bm A G
-Without you, I feel torn, like a sail in a storm
-A
-Without you I'm just a sad song
-
-[Bridge]
-F#m G D A
-You're the perfect melody, the only harmony I wanna hear
-F#m G D
-You're my favorite part of me, with you standing next to me I've got nothing
-A
-to fear
-
-[Chorus]
-G D A
-Without you, I feel broke like I'm half of a whole
-G D A
-Without you, I've got no hand to hold
-G D F# Bm A G
-Without you, I feel torn, like a sail in a storm
-A
-Without you I'm just a sad song
-
-[Outro]
-G D A
-I'm just a sad song
+You should go and love yourself
                     </pre>
                 `;
             }
         }
     </script>
-</head>
-<body>
-    <header>
-        <h1>We the Kings - Songs</h1>
-    </header>
-
-    <main>
-        <!-- Links to Load Songs -->
-        <nav>
-            <ul>
-                <li><a href="#" onclick="loadSong('Love Yourself')">Love Yourself</a></li>
-                <li><a href="#" onclick="loadSong('sadSong')">Sad Song</a></li>
-            </ul>
-        </nav>
-
-        <!-- Placeholder for song content -->
-        <section id="songContent">
-            <h2>Select a song to view the lyrics and chords</h2>
-        </section>
-    </main>
-
-    <footer>
-        <p><a href="index.html">Back to Home</a></p>
-    </footer>
 </body>
 </html>
