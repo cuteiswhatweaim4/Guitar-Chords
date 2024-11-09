@@ -102,5 +102,10 @@ footer a {
 
 .pos_center {
 
+position: absolute;
+width: 70%;
+left: 15%;
+top: 20%;
+}
     
     
