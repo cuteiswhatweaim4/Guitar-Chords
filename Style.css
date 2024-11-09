@@ -55,6 +55,13 @@ nav ul li a {
     transition: all 0.3s ease;
 }
 
+.song-image {
+    width: 50px; /* Adjust image size */
+    height: 50px; /* Adjust image size */
+    margin-bottom: 5px; /* Space between image and text */
+    border-radius: 8px; /* Optional: Round corners of the image */
+}
+
 nav ul li a:hover {
     color: #ffcc00; /* Hover color change */
     transform: translateY(-3px); /* Slight lift on hover */
