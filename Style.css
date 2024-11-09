@@ -35,12 +35,6 @@ header h1 {
 }
 
 /* Navigation Styles */
-
-CSS (Updated for Right-Aligned Images):
-Now we modify the CSS to align the image to the right of the text, while keeping it small but visible.
-
-css
-Copy code
 nav ul li {
     display: flex; /* Flexbox layout to place image and text side by side */
     align-items: center; /* Align the text and image vertically */
@@ -93,6 +87,31 @@ section {
     word-wrap: break-word;
 }
 
+/* Song Lyrics & Image Styling */
+.song-container {
+    display: flex; /* Use Flexbox to place the image and lyrics side by side */
+    justify-content: space-between; /* Space between the lyrics and the image */
+    align-items: center; /* Vertically align them */
+    margin-top: 20px; /* Space between header and content */
+}
+
+.lyrics {
+    flex: 1; /* Take all available space for lyrics */
+    padding-right: 20px; /* Space between lyrics and image */
+}
+
+.song-image img {
+    width: 150px; /* Size of the image */
+    height: auto; /* Keep aspect ratio intact */
+    border-radius: 8px; /* Optional rounded corners */
+    object-fit: cover; /* Ensures the image fits nicely within the box */
+}
+
+.song-image:hover img {
+    opacity: 0.8; /* Slightly fade image on hover */
+}
+
+/* Section Title Styles */
 section h2 {
     color: #ffcc00; /* Yellow for headings */
     margin-bottom: 15px;
@@ -144,6 +163,16 @@ footer a {
 
     footer {
         font-size: 0.8em;
+    }
+
+    /* Stack lyrics and image vertically on small screens */
+    .song-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .song-image img {
+        width: 100px; /* Adjust image size for small screens */
     }
 }
 
