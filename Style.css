@@ -100,11 +100,14 @@ section {
     padding-right: 20px; /* Space between lyrics and image */
 }
 
+/* New styles to enlarge image and position on the right side of text */
 .song-image img {
-    width: 150px; /* Size of the image */
+    width: 150px; /* Updated image size */
     height: auto; /* Keep aspect ratio intact */
     border-radius: 8px; /* Optional rounded corners */
     object-fit: cover; /* Ensures the image fits nicely within the box */
+    margin-left: 20px; /* Adds space between image and text */
+    float: right; /* Positions the image on the right side */
 }
 
 .song-image:hover img {
@@ -173,6 +176,7 @@ footer a {
 
     .song-image img {
         width: 100px; /* Adjust image size for small screens */
+        margin-left: 0; /* Remove margin for smaller screens */
     }
 }
 
