@@ -112,20 +112,6 @@ footer p {
     float: right;
     width: 30%;
     
-}
-
-/* Left-align the lyrics and chords in <pre> */
-pre {
-    background-color: #e9e9e9;
-    padding: 20px;
-    border-radius: 8px;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 1.1em;
-    overflow: auto;
-    white-space: pre-wrap; /* Allow text to wrap */
-    word-wrap: break-word; /* Ensure long words break correctly */
-    text-align: left; /* Ensure left alignment */
-}
 
 /* Make sure song lyrics and chords scale well on mobile */
 @media (max-width: 768px) {
