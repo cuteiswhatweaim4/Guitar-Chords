@@ -35,36 +35,45 @@ header h1 {
 }
 
 /* Navigation Styles */
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 20px 0;
-    text-align: center;
-}
 
+CSS (Updated for Right-Aligned Images):
+Now we modify the CSS to align the image to the right of the text, while keeping it small but visible.
+
+css
+Copy code
 nav ul li {
-    display: inline-block;
-    margin: 0 20px;
+    display: flex; /* Flexbox layout to place image and text side by side */
+    align-items: center; /* Align the text and image vertically */
+    margin: 15px 0; /* Vertical space between items */
 }
 
 nav ul li a {
-    color: #333;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.1em;
-    transition: all 0.3s ease;
-}
-
-.song-image {
-    width: 50px; /* Adjust image size */
-    height: 50px; /* Adjust image size */
-    margin-bottom: 5px; /* Space between image and text */
-    border-radius: 8px; /* Optional: Round corners of the image */
+    display: flex; /* Flex layout for the content */
+    justify-content: space-between; /* Space between text and image */
+    text-decoration: none; /* No underline for links */
+    color: #333; /* Default color for text */
+    width: 100%; /* Full width of the container */
 }
 
 nav ul li a:hover {
-    color: #ffcc00; /* Hover color change */
-    transform: translateY(-3px); /* Slight lift on hover */
+    color: #ffcc00; /* Hover color for text */
+}
+
+nav ul li a span {
+    font-weight: bold; /* Make the song name bold */
+    font-size: 1.2em; /* Adjust the font size */
+}
+
+.song-image {
+    width: 50px; /* Adjust image width */
+    height: auto; /* Keep aspect ratio intact */
+    margin-left: 15px; /* Space between the text and the image */
+    border-radius: 8px; /* Optional: Round corners of the image */
+    object-fit: cover; /* Ensures the image fits well without stretching */
+}
+
+.song-image:hover {
+    opacity: 0.8; /* Slightly fade the image on hover */
 }
 
 /* Main Content Styles */
