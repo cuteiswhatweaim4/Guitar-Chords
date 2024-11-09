@@ -20,54 +20,38 @@ h1, h2, h3 {
 
 /* Header Styles */
 header {
-    background: linear-gradient(to right, #ffcc00, #ff9933); /* Gradient header */
+    background: linear-gradient(to right, #ffcc00, #ff9933);
     padding: 40px 20px;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    border-bottom: 3px solid #ff9933; /* Accent border */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid #ff9933;
 }
 
 header h1 {
-    color: white; /* White text for title */
-    margin: 0;
+    color: white;
     font-size: 3em;
-    letter-spacing: 2px; /* Slight letter spacing for header */
+    letter-spacing: 2px;
 }
 
 /* Navigation Styles */
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
 nav ul li {
-    display: flex; /* Flexbox layout to place image and text side by side */
-    align-items: center; /* Align the text and image vertically */
-    margin: 15px 0; /* Vertical space between items */
+    margin: 15px 0;
 }
 
 nav ul li a {
-    display: flex; /* Flex layout for the content */
-    justify-content: space-between; /* Space between text and image */
-    text-decoration: none; /* No underline for links */
-    color: #333; /* Default color for text */
-    width: 100%; /* Full width of the container */
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 1.2em;
 }
 
 nav ul li a:hover {
-    color: #ffcc00; /* Hover color for text */
-}
-
-nav ul li a span {
-    font-weight: bold; /* Make the song name bold */
-    font-size: 1.2em; /* Adjust the font size */
-}
-
-.song-image {
-    width: 50px; /* Adjust image width */
-    height: auto; /* Keep aspect ratio intact */
-    margin-left: 15px; /* Space between the text and the image */
-    border-radius: 8px; /* Optional: Round corners of the image */
-    object-fit: cover; /* Ensures the image fits well without stretching */
-}
-
-.song-image:hover {
-    opacity: 0.8; /* Slightly fade the image on hover */
+    color: #ffcc00;
 }
 
 /* Main Content Styles */
@@ -83,52 +67,43 @@ section {
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-    max-width: 100%;
     word-wrap: break-word;
 }
 
-/* Song Lyrics & Image Styling */
+/* Song Container and Image Positioning */
 .song-container {
-    display: flex; /* Use Flexbox to place the image and lyrics side by side */
-    justify-content: space-between; /* Space between the lyrics and the image */
-    align-items: center; /* Vertically align them */
-    margin-top: 20px; /* Space between header and content */
+    display: flex;
+    gap: 20px; /* Space between lyrics and image */
+    margin-top: 20px;
 }
 
 .lyrics {
-    flex: 1; /* Take all available space for lyrics */
-    padding-right: 20px; /* Space between lyrics and image */
+    flex: 1;
 }
 
-/* New styles to enlarge image and position on the right side of text */
-.song-image img {
-    width: 150px; /* Updated image size */
-    height: auto; /* Keep aspect ratio intact */
-    border-radius: 8px; /* Optional rounded corners */
-    object-fit: cover; /* Ensures the image fits nicely within the box */
-    margin-left: 20px; /* Adds space between image and text */
-    float: right; /* Positions the image on the right side */
+.song-image {
+    width: 150px; /* Adjusted image size */
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    align-self: flex-start; /* Align image with top of lyrics */
 }
 
-.song-image:hover img {
-    opacity: 0.8; /* Slightly fade image on hover */
+.song-image:hover {
+    opacity: 0.8;
 }
 
-/* Section Title Styles */
-section h2 {
-    color: #ffcc00; /* Yellow for headings */
-    margin-bottom: 15px;
-    font-size: 2em;
-}
+/* Responsive Design */
+@media (max-width: 600px) {
+    .song-container {
+        flex-direction: column;
+        align-items: center;
+    }
 
-section h3 {
-    color: #666;
-    font-size: 1.3em;
-}
-
-section p {
-    color: #555;
-    line-height: 1.8;
+    .song-image {
+        width: 100px;
+        margin: 10px 0;
+    }
 }
 
 /* Footer Styles */
@@ -136,9 +111,6 @@ footer {
     text-align: center;
     padding: 20px;
     background-color: #f1f1f1;
-    position: relative;
-    bottom: 0;
-    width: 100%;
     font-size: 0.9em;
     color: #888;
 }
@@ -147,56 +119,4 @@ footer a {
     color: #ffcc00;
     text-decoration: none;
     font-weight: bold;
-}
-
-/* Responsive Design */
-@media (max-width: 600px) {
-    nav ul li {
-        display: block;
-        margin: 10px 0;
-    }
-
-    header h1 {
-        font-size: 2.2em;
-    }
-
-    section {
-        padding: 15px;
-    }
-
-    footer {
-        font-size: 0.8em;
-    }
-
-    /* Stack lyrics and image vertically on small screens */
-    .song-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .song-image img {
-        width: 100px; /* Adjust image size for small screens */
-        margin-left: 0; /* Remove margin for smaller screens */
-    }
-}
-
-/* Button Styles */
-button {
-    background-color: #ffcc00;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: #ff9933;
-}
-
-/* Add hover effects to sections */
-section:hover {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
