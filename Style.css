@@ -94,16 +94,14 @@ footer a {
 
 
 .text-with-image {
-    display: flex;
-    align-items: center; /* Vertically centers the text and image */
+    display: flex;               /* Use Flexbox to align items horizontally */
+    align-items: flex-start;     /* Align image and text at the top */
+    margin-bottom: 20px;         /* Optional: space between content */
 }
 
 .text-with-image img {
-    width: 50px; /* Adjust the image size */
-    margin-right: 10px; /* Space between the image and text */
-}
-
-.text-with-image p {
-    margin: 0; /* Remove default margin from paragraph */
-}
+    width: 150px;                /* Adjust the image width */
+    height: auto;                /* Ensure the height maintains aspect ratio */
+    margin-right: 20px;          /* Space between the image and the text */
+    border-radius: 8px;          /* Optional: Rounded corners on the image */
     
