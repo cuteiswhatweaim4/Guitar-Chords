@@ -91,17 +91,19 @@ footer p {
     margin-bottom: 15px;
 }
 
+/* Remove centering for image and lyrics */
 .pos_cen {
-    text-align: center;
+    text-align: left; /* Left-align content */
     margin-top: 20px;
 }
 
 .pos_cen img {
-    max-width: 100%;
+    max-width: 20%; /* Make image responsive */
     height: auto;
     border-radius: 8px;
 }
 
+/* Left-align the lyrics and chords in <pre> */
 pre {
     background-color: #e9e9e9;
     padding: 20px;
@@ -109,5 +111,27 @@ pre {
     font-family: 'Courier New', Courier, monospace;
     font-size: 1.1em;
     overflow: auto;
-    white-space: pre-wrap;
+    white-space: pre-wrap; /* Allow text to wrap */
+    word-wrap: break-word; /* Ensure long words break correctly */
+    text-align: left; /* Ensure left alignment */
+}
+
+/* Make sure song lyrics and chords scale well on mobile */
+@media (max-width: 768px) {
+    body {
+        font-size: 1em; /* Adjust font size for mobile */
+    }
+
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    #songs h2, #chords h2, #about h2, #contact h2 {
+        font-size: 1.5em;
+    }
+
+    pre {
+        font-size: 1em; /* Make the preformatted text a bit smaller */
+        padding: 15px;
+    }
 }
