@@ -100,8 +100,8 @@ footer a {
 }
 
 .text-with-image img {
-    width: 150px;                /* Adjust the image width */
-    height: auto;                /* Ensure the height maintains aspect ratio */
+    width: 20px;                /* Adjust the image width */
+    height: 20px;                /* Ensure the height maintains aspect ratio */
     margin-right: 20px;          /* Space between the image and the text */
     border-radius: 8px;          /* Optional: Rounded corners on the image */
     
