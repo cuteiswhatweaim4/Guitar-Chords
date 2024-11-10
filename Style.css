@@ -97,18 +97,14 @@ footer p {
 }
 
 /* Remove centering for image and lyrics */
-.pos_cen {
-    position: absolute;
-      width: 70%;
-    left: 15%;
+.image style {
+    position:right;
+    width: 300px;
+    height: 300px;
+
 }
 
-.img_10000hours {
-    float: right;
-    width: 30%;
-    height: 30%
-}
-    
+
     
 
 /* Make sure song lyrics and chords scale well on mobile */
